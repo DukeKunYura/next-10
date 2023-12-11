@@ -1,13 +1,15 @@
 import { useState } from "react";
 import Link from 'next/link';
+import MainContainer from "../components/MainContainer";
 
 const Users = ({users}) => {
   return (
-    <div>Users
+    <MainContainer keywords={"users"}>
+      Users
         <div>
             {users.map(user=> <ul key={user.id}><Link href={`/user/${user.id}`} >{user.name}</Link></ul>)}
         </div>
-    </div>
+    </MainContainer>
   )
 }
 
