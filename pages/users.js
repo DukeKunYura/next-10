@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import MainContainer from '../components/MainContainer';
+import CardUser from '../components/CardUser';
 
 const Users = ({ users }) => {
     return (
         <MainContainer keywords={'users'}>
-            <div class="container-xl">
+            <div className="container-xl">
                 {users.map((user) => (
-                    <ul key={user.id}>
-                        <Link href={`/user/${user.id}`}>{user.name}</Link>
-                    </ul>
+                    <CardUser key={user.id} id={user.id} name={user.name} />
                 ))}
             </div>
         </MainContainer>

@@ -1,15 +1,15 @@
 import { useRouter } from 'next/router';
 import styles from '../../styles/User.module.scss';
 import MainContainer from '../../components/MainContainer';
+import UserInfo from '../../components/UserInfo';
 
 export default function User({ user }) {
     const { query } = useRouter();
     console.log(user);
     return (
         <MainContainer keywords={user.name}>
-            <div class="container-xl">
-                <h3>User id: {query.id}</h3>
-                <h3>{user.name}</h3>
+            <div className="container-xl">
+                <UserInfo user={user} />
             </div>
         </MainContainer>
     );
