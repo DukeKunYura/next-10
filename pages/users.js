@@ -5,8 +5,7 @@ import MainContainer from '../components/MainContainer';
 const Users = ({ users }) => {
     return (
         <MainContainer keywords={'users'}>
-            Users
-            <div>
+            <div class="container-xl">
                 {users.map((user) => (
                     <ul key={user.id}>
                         <Link href={`/user/${user.id}`}>{user.name}</Link>

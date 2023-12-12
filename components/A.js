@@ -4,7 +4,7 @@ import styles from '../styles/A.module.css';
 const ALink = ({ text, href }) => {
     return (
         <Link href={href}>
-            <a className={styles.link}>{text}</a>
+            <a class="nav-link">{text}</a>
         </Link>
     );
 };
